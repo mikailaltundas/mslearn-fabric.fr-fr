@@ -8,23 +8,6 @@ lab:
 
 Dans ce labo, vous allez ingérer des données dans le lakehouse Fabric et utiliser PySpark pour lire et analyser les données.
 
-Ce labo prend environ 45 minutes.
-
-## Prérequis
-
-* [Version d’évaluation de Microsoft Fabric](https://www.microsoft.com/microsoft-fabric/getting-started)
-
-## Créer un espace de travail
-
-Avant de pouvoir utiliser des données dans Fabric, vous devez créer un espace de travail.
-
-1. Accédez à la [page d’accueil de Microsoft Fabric](https://app.fabric.microsoft.com/home?experience=fabric) sur `https://app.fabric.microsoft.com/home?experience=fabric` dans un navigateur et connectez-vous avec vos informations d’identification Fabric.
-1. Dans la barre de navigation de gauche, sélectionnez **Espaces de travail ** (🗇), puis **Nouvel espace de travail**.
-1. Nommez le nouvel espace de travail et, dans la section **Avancé**, sélectionnez le mode de licence approprié. Si vous avez démarré une version d’évaluation de Microsoft Fabric, sélectionnez Version d’évaluation.
-1. Sélectionnez **Appliquer** pour créer et ouvrir l’espace de travail.
- 
-    ![Image d’écran d’un nouvel espace de travail Fabric.](Images/new-workspace.jpg)
-
 ## Créer un lakehouse et charger des fichiers
 
 Maintenant que vous disposez d’un espace de travail, vous pouvez créer un lakehouse pour vos fichiers de données. Dans votre nouvel espace de travail, sélectionnez **+ Nouvel élément** et **Lakehouse**. Nommez le lakehouse, puis sélectionnez **Créer**. Après un court délai, un nouveau lakehouse est créé.
@@ -581,15 +564,4 @@ Bien que *matplotlib* vous permette de créer des types de graphiques différent
 
 >[!NOTE]
 > Pour en savoir plus sur le traçage avec seaborn, consultez la documentation [seaborn](https://seaborn.pydata.org/index.html).
-
-## Nettoyer les ressources
-
-Dans cet exercice, vous avez appris à utiliser Spark pour travailler sur des données dans Microsoft Fabric.
-
-Si vous avez terminé d’explorer vos données, vous pouvez mettre fin à la session Spark et supprimer l’espace de travail que vous avez créé pour cet exercice.
-
-1.  Dans le menu du notebook, sélectionnez **Arrêter la session** pour mettre fin à la session Spark.
-1.  Dans la barre de gauche, sélectionnez l’icône de votre espace de travail pour afficher tous les éléments qu’il contient.
-1.  Sélectionnez **Paramètres de l’espace de travail** et, dans la section**Général**, faites défiler vers le bas et sélectionnez **Supprimer cet espace de travail**.
-1.  Sélectionnez **Supprimer** pour supprimer l’espace de travail.
 

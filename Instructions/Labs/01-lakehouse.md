@@ -10,20 +10,25 @@ Les solutions d’analytique des données à grande échelle sont généralement
 
 Dans Microsoft Fabric, un lakehouse fournit un stockage de fichiers hautement évolutif dans un magasin *OneLake* (basé sur Azure Data Lake Store Gen2) avec un metastore pour des objets relationnels tels que des tables et des vues basées sur le format de table *Delta Lake* open source. Delta Lake vous permet de définir, dans votre lakehouse, un schéma de tables que vous pouvez interroger à l’aide de SQL.
 
-Ce labo prend environ **30** minutes.
+## Accéder à Microsoft Fabric
 
-> **Remarque** : Vous devez disposer d’une [licence d’essai Microsoft Fabric](https://learn.microsoft.com/fabric/get-started/fabric-trial) pour effectuer cet exercice.
+1. Accédez à [Microsoft Fabric](https://app.fabric.microsoft.com) avec ce lien `https://app.fabric.microsoft.com`.
 
-## Créer un espace de travail
+    ![Page de connexion de Microsoft Fabric](./Images/fabric_login_page.png)
 
-Avant d’utiliser des données dans Fabric, créez un espace de travail avec l’essai gratuit de Fabric activé.
+1. Renseignez l'adresse e-mail et le mot de passe qui vous ont été communiqués. Une fois connecté, vous arriverez sur cette page.
 
-1. Accédez à la [page d’accueil de Microsoft Fabric](https://app.fabric.microsoft.com/home?experience=fabric) sur `https://app.fabric.microsoft.com/home?experience=fabric` dans un navigateur et connectez-vous avec vos informations d’identification Fabric.
-1. Dans la barre de menus à gauche, sélectionnez **Espaces de travail** (l’icône ressemble à &#128455;).
-1. Créez un nouvel espace de travail avec le nom de votre choix et sélectionnez un mode de licence dans la section **Avancé** qui comprend la capacité Fabric (*Essai*, *Premium* ou *Fabric*).
-1. Lorsque votre nouvel espace de travail s’ouvre, il doit être vide.
+    ![Page d'accueil de Microsoft Fabric](./Images/fabric_portal_home.png)
 
-    ![Capture d’écran d’un espace de travail vide dans Fabric.](./Images/new-workspace.png)
+1. Sur la barre latérale gauche, cliquez sur Workspaces puis sélectionnez votre workspace.
+
+    > **Note : Le nom de votre workspace peut être différent de celui affiché dans l'image ci-dessous.**
+
+    ![Bouton Workspace](./Images/fabric_workspaces.png)
+
+1. Vous arrivez alors dans un espace de travail vide, qui sera complété au fur et à mesure de la formation.
+
+    ![Bouton Workspace](./Images/empty_workspace.png)
 
 ## Créer un lakehouse
 
@@ -58,13 +63,6 @@ Fabric offre plusieurs façons de charger des données dans le lakehouse, notamm
     ![Capture d’écran du fichier sales.csv chargé dans un lakehouse.](./Images/uploaded-sales-file.png)
 
 5. Sélectionnez le fichier **sales.csv** pour afficher un aperçu de son contenu.
-
-## Explorer les raccourcis
-
-Dans de nombreux scénarios, les données que vous devez utiliser dans votre lakehouse peuvent être stockées dans un autre emplacement. Même s’il existe de nombreuses façons d’ingérer des données dans le stockage OneLake pour votre lakehouse, une autre option consiste à créer un *raccourci*. Les raccourcis vous permettent d’inclure des données de source externe dans votre solution d’analytique sans la surcharge et le risque d’incohérence des données associée à leur copie.
-
-1. Dans le menu  **...** du dossier **Fichiers**, sélectionnez **Nouveau raccourci**.
-2. Affichez les types de sources de données disponibles pour les raccourcis. Fermez ensuite la boîte de dialogue **Nouveau raccourci** sans créer de raccourci.
 
 ## Charger des données de fichier dans une table
 
@@ -165,13 +163,3 @@ Les tables de votre lakehouse sont automatiquement ajoutées à un modèle séma
     - Le point de terminaison d’analytique SQL de votre lakehouse.
     - Un modèle sémantique par défaut pour les tables de votre lakehouse.
     - Le **Rapport des ventes d’articles**.
-
-## Nettoyer les ressources
-
-Dans cet exercice, vous avez créé un lakehouse et importé des données dans celui-ci. Vous avez vu comment un lakehouse se compose de fichiers et de tables stockés dans un magasin de données OneLake. Les tables managées peuvent être interrogées à l’aide de SQL et sont incluses dans un modèle sémantique par défaut pour prendre en charge les visualisations de données.
-
-Si vous avez terminé d’explorer votre lakehouse, vous pouvez supprimer l’espace de travail que vous avez créé pour cet exercice.
-
-1. Dans la barre de gauche, sélectionnez l’icône de votre espace de travail pour afficher tous les éléments qu’il contient.
-2. Dans la barre d’outils, sélectionnez **Paramètres de l’espaces de travail**.
-3. Dans la section **Général**, sélectionnez **Supprimer cet espace de travail**.
